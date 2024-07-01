@@ -1,0 +1,111 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    display: table;
+    margin: auto;
+}
+body {
+    margin: 0px;
+    margin: auto;
+    background-image: url('./assets/background.gif');
+    background-blend-mode:overlay;
+    background-size: cover;
+    background-position: center;
+    image-rendering:pixelated;
+    background-color: rgba(0, 0, 0, 0.795);
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h1 {
+    margin: 0%;
+}
+a {
+    text-decoration: none;
+}
+a > img {
+    width: 16px;
+    transition: width .4s cubic-bezier(.17,.67,.33,.93);
+}
+a > img:hover {
+    width: 24px;
+}
+
+p {
+    margin: 0%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.profilePicture {
+    width:150px;
+    border-radius: 1000px;
+}
+
+.head {
+    margin: 0px;
+    text-align:center;
+}
+
+.i-img {
+    object-fit: contain;
+    width: 35px;
+    height: 100%;
+    filter: invert(100%);
+}
+
+.interactable-button {
+    padding-top: 10px;
+    animation: onButtonLeave 0.4s cubic-bezier(.17,.67,.33,.93) forwards;
+}
+
+.buttons {
+    display: flex;
+    justify-content:space-between;
+    max-width:140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interactable-button:hover {
+    animation: onButtonHover 0.3s cubic-bezier(.17,.67,.33,.93) forwards;
+}
+
+.usnHandle {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usnChild {
+    margin-top: auto;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+}
+
+@keyframes onButtonHover {
+    from{
+        width: 35px;
+        opacity: 100%;
+    }
+    to{
+        width: 30px;opacity: 50%;
+    }
+}
+
+@keyframes onButtonLeave {
+    from{width: 30px;opacity: 50%;}
+    to{
+        width: 35px;opacity: 100%;
+    }
+}
